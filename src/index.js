@@ -1,12 +1,7 @@
-const express = require("express");
 const dbConnect = require("./db/dbConnect");
 require("dotenv").config();
+const app = require('./app')
 
-const app = express();
-
-app.use("/", (req, res) => {
-  res.send("heelow user");
-});
 
 dbConnect()
   .then(() => {
