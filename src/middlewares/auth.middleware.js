@@ -7,9 +7,9 @@ const userAuth = asyncHandler(async(req,res,next)=>{
     try {
         const token = req.cookies?.accessToken || req.header("Authorization")?.replace("Bearer ","").trim()
     
-        console.log("Cookies:", req.cookies);
-        console.log("Authorization Header:", req.header("Authorization"));
-        console.log("Extracted Token:", token);
+        // console.log("Cookies:", req.cookies);
+        // console.log("Authorization Header:", req.header("Authorization"));
+        // console.log("Extracted Token:", token);
 
         if (!token || typeof token !== "string") {
             throw new ApiError(401, "Invalid or missing token");
